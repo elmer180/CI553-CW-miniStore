@@ -56,7 +56,8 @@ public class PackingView implements Observer
     Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
     
     pageTitle.setBounds( 110, 0 , 270, 20 );       
-    pageTitle.setText( "Packing Bought Order" );                        
+    pageTitle.setText( "Packing Bought Order" );
+    pageTitle.setFont(f);
     cp.add( pageTitle );
 
     theBtPack.setBounds( 16, 25+60*0, 80, 40 );   // Check Button

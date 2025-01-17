@@ -55,12 +55,13 @@ public class CustomerModel extends Observable
    * Check if the product is in Stock
    * @param productNum The product number
    */
-  public void doCheck(String productNum )
+  public void doCheck(String productNum)
   {
     theBasket.clear();                          // Clear s. list
     String theAction = "";
+    int amount = 1;
     pn  = productNum.trim();                    // Product no.
-    int    amount  = 1;                         //  & quantity
+
     try
     {
       if ( theStock.exists( pn ) )              // Stock Exists?
@@ -68,12 +69,12 @@ public class CustomerModel extends Observable
         Product pr = theStock.getDetails( pn ); //  Product
         if ( pr.getQuantity() >= amount )       //  In stock?
         { 
-          theAction =                           //   Display 
+          theAction =                           //   Display
             String.format( "%s : %7.2f (%2d) ", //
               pr.getDescription(),              //    description
               pr.getPrice(),                    //    price
               pr.getQuantity() );               //    quantity
-          pr.setQuantity( amount );             //   Require 1
+          pr.setQuantity(amount);             //   Require 1
           theBasket.add( pr );                  //   Add to basket
           thePic = theStock.getImage( pn );     //    product
         } else {                                //  F
