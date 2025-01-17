@@ -64,6 +64,7 @@ public class BackDoorModel extends Observable
   {
     String theAction = "";
     pn  = productNum.trim();                    // Product no.
+
     try
     {                 //  & quantity
       if ( theStock.exists( pn ) )              // Stock Exists?

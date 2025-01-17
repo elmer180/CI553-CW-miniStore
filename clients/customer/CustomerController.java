@@ -22,9 +22,10 @@ public class CustomerController
 
   /**
    * Check interaction from view
+   *
    * @param pn The product number to be checked
    */
-  public void doCheck( String pn )
+  public void doCheck(String pn)
   {
     model.doCheck(pn);
   }

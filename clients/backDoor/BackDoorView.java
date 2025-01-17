@@ -59,7 +59,8 @@ public class BackDoorView implements Observer
     Font f = new Font("Monospaced",Font.PLAIN,12);  // Font f is
 
     pageTitle.setBounds( 110, 0 , 270, 20 );       
-    pageTitle.setText( "Staff check and manage stock" );                        
+    pageTitle.setText( "Staff check and manage stock" );
+    pageTitle.setFont(f);
     cp.add( pageTitle );
     
     theBtQuery.setBounds( 16, 25+60*0, 80, 40 );    // Buy button 
